@@ -36,6 +36,9 @@ gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 # Use Thin as the app server
 gem 'thin'
 
+# Use foreman to run env sensitive services
+gem 'foreman'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
