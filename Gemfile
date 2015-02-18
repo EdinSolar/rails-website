@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Sentry to monitor errors
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
