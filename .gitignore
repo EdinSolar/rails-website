@@ -11,3 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Super secret env secrets
+.env
