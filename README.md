@@ -1,28 +1,34 @@
-== README
+EdinSolar site
+==============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dependencies
+------------
 
-Things you may want to cover:
+###System level:
 
-* Ruby version
+* Postgresql devel
+* Sqlite devel
 
-* System dependencies
+###App:
 
-* Configuration
+* Ruby (we're using 2.1.5)
+  - [RVM][] is highly recommended
+* Bundler `(sudo) gem install bundler` (Note: If you're running RVM you don't need root privileges)
+* [Heroku toolbelt][] (if you haven't already installed)
+* Foreman `(sudo) gem install foreman` **(Comes installed with Heroku toolbelt)**
+* To install the other dependencies, run `bundle`
 
-* Database creation
+Running
+-------
 
-* Database initialization
+We're hosting the site on Heroku for the moment, so please talk to Will Mathewson (neanias) for access.  
+The **SUPER SECRET** DSN key file can be found on Slack.
 
-* How to run the test suite
+To run the server locally,
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails server`
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[RVM]: http://rvm.io/
+[Heroku toolbelt]: https://toolbelt.heroku.com/
+
