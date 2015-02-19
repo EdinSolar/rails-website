@@ -25,8 +25,7 @@ class PostsController < ApplicationController
 
     if @post.valid?
       @post.save
-      flash[:notice] = "Post #@post.title was successfully created"
-      redirect_to @post
+      redirect_to @post, notice: "Post #@post.title was successfully created"
     else
       render :new
     end
@@ -35,8 +34,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
-      flash[:notice] = 'Post was successfully updated.'
-      redirect_to @post
+      redirect_to @post, notice: 'Post was successfully updated.'
     else
       render :edit
     end
@@ -45,8 +43,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
-    flash[:notice] = "Post was successfully deleted."
-    redirect_to posts_url
+    redirect_to posts_url, notice: 'Post was successfully deleted.'
   end
 
   private
