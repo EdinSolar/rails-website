@@ -48,6 +48,12 @@ gem 'bootstrap_form'
 # Use Kaminari for pagination
 gem 'kaminari'
 
+# Use Devise for users because I'm lazy
+gem 'devise'
+
+# Use Cancan for roles, same reason as devise
+gem 'cancan'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
