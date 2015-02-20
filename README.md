@@ -1,6 +1,9 @@
 EdinSolar site
 ==============
 
+[![Build Status](https://travis-ci.org/EdinSolar/rails-website.svg?branch=feature%2Fmove-over)](https://travis-ci.org/EdinSolar/rails-website)
+[![Code Climate](https://codeclimate.com/github/EdinSolar/rails-website/badges/gpa.svg)](https://codeclimate.com/github/EdinSolar/rails-website)
+
 Dependencies
 ------------
 
