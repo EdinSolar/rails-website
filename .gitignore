@@ -41,3 +41,5 @@ bower.json
 
 # Super secret env secrets
 .env
+# Same secrets but using direnv to have them dir specific
+.envrc
