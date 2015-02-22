@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
     if @post.valid?
       @post.save
-      redirect_to @post, notice: "Post #@post.title was successfully created"
+      redirect_to @post, notice: "Post #{@post.title} was successfully created"
     else
       render :new
     end
