@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :username, presence: true, uniqueness: { case_sensitive: false },
+    format: { with: /\A[a-z0-9\-_]+\z/,
+              message: 'only allows letters, numbers, dashes and unerscores'}
+  validates :fullname, presence: true, length: { min: 6 },
+    format: { with: /\A[a-zA-Z\-\s]+\z/, message: 'only allows letters, dashes and spaces' }
 
   def role?(role)
     !roles.find_by_name(role.to_s.camelize).nil?
