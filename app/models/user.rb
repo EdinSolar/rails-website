@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_and_belongs_to_many :roles
+  has_many :posts
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -12,7 +13,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: { case_sensitive: false },
     format: { with: /\A[a-z0-9\-_]+\z/,
               message: 'only allows letters, numbers, dashes and unerscores'}
-  validates :fullname, presence: true, length: { min: 6 },
+  validates :fullname, presence: true, length: { minimum: 6 },
     format: { with: /\A[a-zA-Z\-\s]+\z/, message: 'only allows letters, dashes and spaces' }
 
   def role?(role)
