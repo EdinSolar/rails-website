@@ -7,13 +7,13 @@
 </p>
 
 <p>
-  <small>Created at:</small>
-  <small><%= @post.created_at %></small>
+  <small>Created</small>
+  <small><%= time_ago_in_words @post.created_at %> ago</small>
 </p>
 
 <p>
-  <small>Updated at:</small>
-  <small><%= @post.updated_at %></small>
+  <small>Updated</small>
+  <small><%= time_ago_in_words @post.updated_at %> ago</small>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
