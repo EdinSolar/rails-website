@@ -4,4 +4,7 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
 
   belongs_to :user
+
+  # Have all the tags!
+  acts_as_taggable
 end
