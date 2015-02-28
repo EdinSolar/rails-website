@@ -1,12 +1,13 @@
 module ApplicationHelper
   def render_markdown(text)
-    options = {no_intra_emphasis: true, fenced_code_blocks: true,
-               autolink: true, space_after_headers: true, superscript: true,
-               highlight: true, footnotes: true}
-    html_renderer = Redcarpet::Render::HTML.new(filter_html: true,
-                                                hard_wrap: true)
-    renderer = Redcarpet::Markdown.new(html_renderer, options)
+    renderer = HTML::Pipeline.new [
+      HTML::Pipeline::MarkdownFilter,
+      HTML::Pipeline::SanitizationFilter,
+      HTML::Pipeline::AutolinkFilter,
+      HTML::Pipeline::SyntaxHighlightFilter
+    ], { gfm: true }
 
-    renderer.render(text).html_safe
+    filter = renderer.call(text)
+    filter[:output]
   end
 end
