@@ -62,6 +62,7 @@ GEM
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
     cancan (1.6.10)
+    charlock_holmes (0.7.3)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -70,6 +71,7 @@ GEM
       execjs
     coffee-script-source (1.9.0)
     columnize (0.9.0)
+    crass (1.0.1)
     daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
@@ -82,6 +84,7 @@ GEM
       warden (~> 1.2.3)
     dotenv (1.0.2)
     erubis (2.7.0)
+    escape_utils (1.0.1)
     eventmachine (1.0.7)
     execjs (2.3.0)
     faraday (0.9.1)
@@ -89,9 +92,18 @@ GEM
     foreman (0.77.0)
       dotenv (~> 1.0.2)
       thor (~> 0.19.1)
+    github-linguist (4.4.2)
+      charlock_holmes (~> 0.7.3)
+      escape_utils (~> 1.0.1)
+      mime-types (>= 1.19)
+      rugged (~> 0.22.0b4)
+    github-markdown (0.6.8)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
+    html-pipeline (1.11.0)
+      activesupport (>= 2)
+      nokogiri (~> 1.4)
     i18n (0.7.0)
     jbuilder (2.2.7)
       activesupport (>= 3.0.0, < 5)
@@ -115,8 +127,14 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogumbo (1.2.0)
+      nokogiri
     orm_adapter (0.5.0)
     pg (0.18.1)
+    posix-spawn (0.3.10)
+    pygments.rb (0.6.2)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -147,9 +165,14 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
-    redcarpet (3.2.2)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rinku (1.7.3)
+    rugged (0.22.0b5)
+    sanitize (3.1.2)
+      crass (~> 1.0.1)
+      nokogiri (>= 1.4.4)
+      nokogumbo (= 1.2.0)
     sass (3.4.12)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -193,6 +216,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -206,12 +230,17 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   foreman
+  github-linguist
+  github-markdown
+  html-pipeline
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
   pg
+  pygments.rb
   rails (= 4.2.0)
-  redcarpet
+  rinku
+  sanitize
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sentry-raven!

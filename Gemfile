@@ -58,7 +58,12 @@ gem 'cancan'
 gem 'acts-as-taggable-on', '~> 3.4'
 
 # Make posts perdy with Markdown
-gem 'redcarpet'
+gem 'html-pipeline'
+gem 'pygments.rb'
+gem 'github-linguist'
+gem 'rinku'
+gem 'github-markdown'
+gem 'sanitize'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
