@@ -57,6 +57,9 @@ gem 'cancan'
 # Make posts taggable
 gem 'acts-as-taggable-on', '~> 3.4'
 
+# Make posts perdy with Markdown
+gem 'redcarpet'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
