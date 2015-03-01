@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
 
   # Have all the tags!
   acts_as_taggable
+
+  STAGED  = 0
+  LIVE    = 1
+  DELETED = 2
 end
