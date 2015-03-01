@@ -62,7 +62,6 @@ GEM
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
     cancan (1.6.10)
-    charlock_holmes_bundle_icu (0.6.9.2)
     charlock_holmes (0.7.3)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -228,7 +227,6 @@ DEPENDENCIES
   bootstrap_form
   byebug
   cancan
-  charlock_holmes_bundle_icu (~> 0.6.9.2)
   coffee-rails (~> 4.1.0)
   devise
   foreman

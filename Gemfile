@@ -57,9 +57,6 @@ gem 'cancan'
 # Make posts taggable
 gem 'acts-as-taggable-on', '~> 3.4'
 
-# Fix charlock_holmes error
-gem 'charlock_holmes_bundle_icu', '~> 0.6.9.2'
-
 # Make posts perdy with Markdown
 gem 'html-pipeline'
 gem 'pygments.rb'
