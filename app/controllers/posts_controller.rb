@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.order(:created_at).page(params[:page])
+    @posts = Post.order(created_at: :desc).page(params[:page])
   end
 
   # GET /posts/1
@@ -39,6 +39,11 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  # GET /posts/tagged/tag
+  def tagged
+    @posts = Post.tagged_with(params[:tag])
   end
 
   # DELETE /posts/1
