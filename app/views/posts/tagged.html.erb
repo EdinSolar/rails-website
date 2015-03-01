@@ -5,8 +5,8 @@
     <li>
       <h4><%= link_to post.title, post %><h4>
       <p><%= post.tags.join(', ') %></p>
-      <p><small>Created <%= time_ago_in_words post.created_at %> ago</small></p>
-      <p><small>Updated <%= time_ago_in_words post.updated_at %> ago</small></p>
+      <p class="small">Created <%= time_ago_in_words post.created_at %> ago</p>
+      <p class="small">Updated <%= time_ago_in_words post.updated_at %> ago</p>
     </li>
   <% end %>
 </ul>
