@@ -1,0 +1,12 @@
+<%= content_for :title, "Tagged posts"  %>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h4><%= link_to post.title, post %><h4>
+      <p><%= post.tags.join(', ') %></p>
+      <p><small>Created <%= time_ago_in_words post.created_at %> ago</small></p>
+      <p><small>Updated <%= time_ago_in_words post.updated_at %> ago</small></p>
+    </li>
+  <% end %>
+</ul>
