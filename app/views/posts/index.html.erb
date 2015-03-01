@@ -10,8 +10,8 @@
     <li>
       <h4><%= link_to "#{post.title}", post %></h4>
       <!--<p><%= post.body %></p>-->
-      <p><small>Created <%= time_ago_in_words post.created_at %> ago</small></p>
-      <p><small>Updated <%= time_ago_in_words post.updated_at %> ago</small></p>
+      <p class="small">Created <%= time_ago_in_words post.created_at %> ago</p>
+      <p class="small">Updated <%= time_ago_in_words post.updated_at %> ago</p>
       <%= link_to 'Show', post %> |
       <%= link_to 'Edit', edit_post_path(post) %> |
       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
