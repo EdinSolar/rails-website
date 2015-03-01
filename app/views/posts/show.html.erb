@@ -4,7 +4,7 @@
 <h2><%= @post.title %></h2>
 
 <p>
-  <%= render_markdown @post.body %>
+  <%= raw render_markdown @post.body %>
 </p>
 
 <p>
