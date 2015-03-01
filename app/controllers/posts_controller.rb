@@ -48,7 +48,8 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
-    @post.destroy
+    @post.status = Post::DELETED
+    @post.save
     redirect_to posts_url, notice: 'Post was successfully deleted.'
   end
 
