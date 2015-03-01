@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.order(created_at: :desc).page(params[:page])
+    @posts = Post.where(status: 1).order(created_at: :desc).page(params[:page])
   end
 
   # GET /posts/1
