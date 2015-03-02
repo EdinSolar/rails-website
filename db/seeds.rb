@@ -10,4 +10,4 @@ User.create({fullname: 'William Mathewson', username: 'neanias',
                      email: 'will@edinsolar.org', password: 'changeme',
                      password_confirmation: 'changeme'})
 
-Role.create('admin')
+Role.create({name: 'admin'})
