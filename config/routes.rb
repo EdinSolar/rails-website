@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'posts/tagged/:tag' => 'posts#tagged'
 
+  # Root routes
   get '/about', to: 'welcome#about'
+  get '/contact', to: 'welcome#contact'
 
   resources :posts
 
