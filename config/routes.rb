@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'welcome/index'
 
   get 'posts/tagged/:tag' => 'posts#tagged'
+
+  get '/about', to: 'welcome#about'
 
   resources :posts
 
