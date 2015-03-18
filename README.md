@@ -11,6 +11,7 @@ Dependencies
 
 * Postgresql devel
 * Sqlite devel
+* libicu (`brew install icu4c`, `apt-get install libicu-dev` or `yum install libocu-devel`)
 
 ###App:
 
