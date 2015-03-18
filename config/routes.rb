@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Root routes
   get '/about', to: 'welcome#about'
   get '/contact', to: 'welcome#contact'
+  get '/sponsors', to: 'welcome#sponsors'
 
   resources :posts
 
